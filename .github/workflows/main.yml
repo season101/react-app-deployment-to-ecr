@@ -20,6 +20,11 @@ jobs:
     - name: Login to Amazon ECR
       uses: aws-actions/amazon-ecr-login@v1
     
+    - name: Check Envs
+      run: |
+        pwd
+        tree
+    
     - name : Build, tag, and push to Amazon ECR
       env: 
         ECR_REGISTRY: 503268062122.dkr.ecr.us-east-1.amazonaws.com
